@@ -35,11 +35,14 @@ import urlparse
 
 rgb_re = re.compile("^.*?rgb[(]([0-9]+).*?([0-9]+).*?([0-9]+)[)].*?[ ]*$")
 
-if not (reportlab.Version[0] == "2" and reportlab.Version[2] >= "1"):
-    raise ImportError("Reportlab Version 2.1+ is needed!")
+# aganzha
+# if not (reportlab.Version[0] == "2" and reportlab.Version[2] >= "1"):
+#     raise ImportError("Reportlab Version 2.1+ is needed!")
 
-REPORTLAB22 = (reportlab.Version[0] == "2" and reportlab.Version[2] >= "2")
-# print "***", reportlab.Version, REPORTLAB22, reportlab.__file__
+# aganzha
+REPORTLAB22 = True
+# REPORTLAB22 = (reportlab.Version[0] == "2" and reportlab.Version[2] >= "2")
+# # print "***", reportlab.Version, REPORTLAB22, reportlab.__file__
 
 log = logging.getLogger("xhtml2pdf")
 
